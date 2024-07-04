@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SADIN RAHMAN PP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Draco is free PSD &amp; HTML template by @afnizarnur">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/kube.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/custom.min.css" />
+    <link rel="shortcut icon" href="img/favicon.png" />
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="form.css">
+	<style>
+		.intro h1:before {
+			/* Edit this with your name or anything else */
+			content: 'SADIN';
+		}
+	</style>
+</head>
+<body>
+	<!-- Navigation -->
+	<div class="main-nav">
+		<div class="container">
+			<header class="group top-nav">
+				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+				    <span class="logo">SADIN</span>
+				</div>
+			    <nav id="navbar-1" class="navbar item-nav">
+				    <ul>
+				        <li class="active"><a href="#about">About</a></li>
+				        <li><a href="#experiences">Qualifiactions</a></li>
+				        <li><a href="#achievements">projects</a></li>
+				        <li><a href="#skills">Skills</a></li>
+						<li><a href="#contact me">contact me</a></li>
+						<li><a href="#enquire now">enquire now</a></li>
+				    </ul>
+				</nav>
+			</header>
+		</div>
+	</div>
+
+	<!-- Introduction -->
+	<div class="intro section" id="about">
+		<div class="container">
+			<p>Hi, I’m software developer</p>
+			<div class="units-row units-split wrap">
+				<div class="unit-20">
+					<img src="photo_2024-07-04_14-12-01.jpg" alt="Avatar">
+				</div>
+				<div class="unit-80">
+					<h1>I AM <br><span id="typed"></span></h1>
+				</div>
+				<p>
+					Experienced software developer with a passion for crafting clean and efficient code. Skilled in designing, developing, and maintaining software solutions, I thrive in collaborative environments where I can contribute my technical expertise to drive project success. Specializing in .net, I am dedicated to continuous learning and staying abreast of emerging technologies.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Work Experience -->
+	<div class="work section second" id="experiences">
+		<div class="container">
+			<h1>educational<br>qualification</h1>
+			<ul class="work-list">
+				<li>2012-2022</li>
+				<li><a href="#">NEMHSS chemmad</a></li>
+				<li>10th grade</li>
+			</ul>
+			<ul class="work-list">
+				<li>2022-2024</li>
+				<li><a href="#">GMHSS cu campus</a></li>
+				<li>12th grade</li>
+			</ul>
+			<ul class="work-list">
+				<li>2024-2025</li>
+				<li><a href="#">Brototype</a></li>
+				<li>skill developing</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Award & Achievements -->
+	<div class="award section second" id="achievements">
+		<div class="container">
+			<h1>projects<br></h1>
+			<ul class="award-list list-flat">
+				<li>developed websites</li>
+				<li><a href="https://sadinrahman.github.io/lee-cooper/" target="_blank">lee cooper</a></li>
+				<li><a href="https://sadinrahman.github.io/pepsi.com/" target="_blank">pepsi</a></li>
+				<li><a href="https://sadinrahman.github.io/the-boring-company/" target="_blank">the boring company</a></li>
+			</ul>
+			
+			
+		</div>
+	</div>
+
+	<!-- Technical Skills -->
+	<div class="skills section second" id="skills">
+		<div class="container">
+			<h1>Technical<br>Skills</h1>
+			<ul class="skill-list list-flat">
+				<li>Web Technology</li>
+				<li>HTML / CSS / Javascript / c++ / c / java</li>
+			</ul>
+			<ul class="skill-list list-flat">
+				<li>Database</li>
+				<li>MySQL </li>
+			</ul>
+			<ul class="skill-list list-flat">
+				<li>Framework</li>
+				<li>dot net</li>
+			</ul>
+		</div>
+	</div>
+	<form id="submit-form"  action="" name="enquire">
+
+	<div id="enquire now" class="formmain">
+		<div class="form">
+		
+
+         <label for="name">enter your name</label>
+		 <input type="text" name="name" id="name" placeholder="your name.."><br>
+		 <label for="email">enter your email id</label>
+		 <input type="text" name="email" id="email" placeholder="your email id"><br>
+		 <label for="phone number">enter your phone number</label>
+		 <input type="number" name="phonenumber" id="number" placeholder="your phone number"><br>
+		 <label for="description">description</label>
+		 <textarea name="description" placeholder="description" id="description"></textarea>
+		 <input type="submit" value="submit">
+		
+
+		</div>
+	</div>
+    </form>
+	<script>
+		function check(){
+			var name=(document.getElementById("name")).value
+			 var specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
+           var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+	//check if empty
+		if(name.length===0){
+			return "the field cant be empty"
+		}
+		// regex to check if there is whitespace
+		else if((name.replace(/\s+/g, '')).length==0){
+
+			return "please enter proper name"
+		}
+		else if(specialCharRegex.test(name)){
+			return "cant contain special character"
+		}
+		else if(name.length<=4){
+			return "must be greater than four characters"
+		}else{
+			return ""
+
+		}
+		}
+		function email(){
+			var email=(document.getElementById("email")).value
+			 var specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
+           var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+		   if(!(emailRegex.test(email))){
+            return "enter proper email id"
+		   }
+		   else if(email.length==0) {
+               return "the field cant be empty"
+		   }
+		else{
+			return ""
+		   }
+		}	
+        function number(){
+			var number=(document.getElementById("number")).value
+			if(number.length==0){
+             return "the field cant be empty"
+			}else if(number.length<10){
+             return "the phone number must contain 10 digits"
+			}else{
+				return ""
+			}
+			
+		}
+        function description(){
+			var specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
+			var description=(document.getElementById("description")).value
+			if(description.length==0){
+             return "the field cant be empty"
+			}else if((description.replace(/\s+/g, '')).length==0){
+             return "field cant empty"
+			}else{
+				return ""
+			}
+		}
+    
+    </script>
+	<!-- Quote -->
+	<div class="quote">
+		<div class="container text-centered">
+			<h1>"First, solve the problem. Then, write the code." - John Johnson</h1>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="units-row" id="contact me">
+			    <div class="unit-50">
+			    	<p>Handcrafted by sadin rahman</p>
+			    </div>
+			    <div class="unit-50">
+					<ul class="social list-flat right">
+						<li><a href="mailto:sadinsadinrahman@gmail.com"><i class="fa fa-send"></i></a></li>
+						<li><a href="https://www.instagram.com/sadin_rahman" target="_blank"><img src="Gray App Icons Instagram.jfif" width="30px" height="30px" alt=""></a></li>
+						<li><a href="https://wa.link/8k32se" target="_blank"><img src="chat_24dp_FILL0_wght400_GRAD0_opsz24.png" width="30px" height="30px" alt=""></a></li>
+						<li><a href="https://www.linkedin.com/in/sadin-rahman-004454289"  target="_blank"><img src="work_24dp_FILL0_wght400_GRAD0_opsz24 (1).png" width="30px" height="30px" ></a></li>
+					</ul>
+			    </div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Javascript -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/typed.min.js"></script>
+    <script src="js/kube.min.js"></script>
+    <script src="js/site.js"></script>
+    <script>
+		function newTyped(){}$(function(){$("#typed").typed({
+		// Change to edit type effect
+		strings: ["SADIN RAHMAN PP."],
+
+		typeSpeed:90,backDelay:700,contentType:"html",loop:!0,resetCallback:function(){newTyped()}}),$(".reset").click(function(){$("#typed").typed("reset")})});
+    </script>
+	<script>
+document.getElementById("submit-form").addEventListener("submit", async function(e) {
+    e.preventDefault();
+	console.log("clicked")
+	let alertdata=check()
+	let alertemail=email()
+	let alertnumber=number()
+	let alertdescription=description()
+	console.log(alertdata.length,alertemail,alertdescription,alertnumber)
+	if(alertdata.length!==0 || alertemail.length!==0 || alertnumber.length!==0 ||alertdescription.length!==0){
+		alert(alertdata)
+		alert(alertemail)
+		alert(alertnumber)
+	}else{
+		var formData = new FormData(this);
+
+try {
+	// Fetch API POST request
+	const response = await fetch("https://script.google.com/macros/s/AKfycbw-HiXdoZ_bE3ZO00hDBdPJ6h7crciUij6Msa_TlH6i_I9sYjB-PhqfXi5FHpi7C8fS8g/exec", {
+		method: "POST",
+		body: formData,
+		// mode:"no-cors"
+		
+	});
+
+	if (response.ok) {
+		alert("Form submitted successfully");
+		window.location.reload();
+		// You can redirect to another page using:
+		// window.location.href = "https://google.com";
+	} else {
+		throw new Error("Network response was not ok");
+	}
+} catch (error) {
+	console.error("Error:", error);
+	alert("Something went wrong");
+}		
+	}
+    // Serialize form data
+ 
+});
+
+    </script>
+</body>
+</html>
